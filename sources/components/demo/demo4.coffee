@@ -2,9 +2,10 @@ import { prefixDom } from 'cfx.dom'
 import React,{ Component } from 'react'
 import Particles from 'react-particles-js'
 import img from '../../../public/assets/demo-1-bg.jpg'
-
+import Login from './login'
 CFX = prefixDom {
   Particles
+  Login
   'div'
   'img'
 }
@@ -18,11 +19,11 @@ class Demo4 extends React.Component
       c_Particles
       c_div
       c_img
+      c_Login
     } = CFX
 
     c_div {}
-    ,           
-      
+    ,              
       c_Particles 
         width: window.innerWidth
         height: window.innerHeight
@@ -105,14 +106,13 @@ class Demo4 extends React.Component
               remove:   
                 particles_nb: 2
           retina_detect  : true
-        style:
-          
+        style:  
           position: 'absolute'
          
       c_img
         src: img
         style:
           zIndex: -1
-
+      c_Login {}
           
 export default Demo4
